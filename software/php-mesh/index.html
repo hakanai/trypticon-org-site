@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"/>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+  <head>
+    <title>PHP-Mesh :: Trypticon</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <script type="text/javascript" src="/javascripts/prototype.js"></script>
+    <script type="text/javascript" src="/javascripts/rotation.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/trypticon-2008-2.css" />
+    
+    
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-97875-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+  <span class="site-title">
+    
+      <a href="/">Trypticon</a>
+    
+  </span>
+  <span id="site-subtitle" class="site-subtitle">Strudel.</span>
+</div>
+<hr/>
+
+
+      <div class="colleft">
+        <div class="col1wrap">
+          <div class="content">
+            
+              
+                <div class="breadcrumbs">
+                  
+                    <span class="crumb"><a href="/software/">Software</a></span>
+                  
+                </div>
+              
+
+              <h1>PHP-Mesh</h1>
+            
+
+            <p> PHP-Mesh is covered by the <a href="http://www.gnu.org/licenses/lgpl.html">GNU
+    Lesser General Public License</a>.</p>
+
+<p> <a href="http://github.com/trejkaz/php-mesh/tarball/1.4"><img src="/images/save.png" width="16" height="16" alt="(Save)"/> Download PHP-Mesh v1.4 FINAL</a></p>
+
+<p> Note: as PHP-Mesh is now what I would consider feature-complete, From here on I will work on
+    some more documentation and a more fully-fleshed example.  I just need to free some time up to
+    do this.</p>
+
+<p> If you use PHP-Mesh, and you like it, please give me some feedback.  If you don't like it,
+    give me even more feedback. :-)</p>
+
+<h2>What Is It?</h2>
+
+<p> PHP-Mesh is a basic framework for meshing together content of web pages with the style
+    which they appear in on the user's screen.</p>
+
+<p> In a way, this accomplishes a task similar to XSLT, where you write a single stylesheet
+    to enable simpler development of the pages which contain the actual content.</p>
+
+<p> The idea was taken from the wonderful <a href="http://www.opensymphony.com/sitemesh/">SiteMesh</a>,
+    made by <a href="http://www.opensymphony.com/">OpenSymphony</a> for
+    <a href="http://java.sun.com/">Java</a>.</p>
+
+<h2>Why Bother?</h2>
+
+<p> Well, the need for something like this came about when I started to move from my home-built
+    Java-based web servers out onto the general web.  Many sites only provide for PHP, and the
+    extremely clean nature of SiteMesh is simply too good to give up.</p>
+
+<p> Of course, you <em>could</em> just include headers and footers.  But the problem is, you have
+    to include these headers and footers in every page.  This won't seem like a problem to you until
+    you're given the job of converting 100 or more pages, and then, what happens when you change
+    the name of the header file?  100 pages to convert all over again.</p>
+
+<p> Another option is to just write all pages as the bit between the &lt;body&gt; and &lt;/body&gt;
+    tags.  This is also less than desirable because it relies on the assumption that headers and
+    footers will be automatically included.  Since you no longer have a full HTML page, you can't
+    test the pages offline, and you can't <em>validate</em> them either (a clean site is a
+    validated site, right?)</p>
+
+<p> So then you have various options.  You could write XSLT and suffer the pain of massive
+    development costs (even if just in terms of personal time.)  You could try and CSS all the
+    pages, but CSS has a tendency of needing code in the HTML to hook it in (at the very least,
+    it requires a &lt;link/&gt; element in the page header at the very least, and usually a few
+    class attributes scattered through the HTML itself.</p>
+
+<p> Clearly there must be a better way.</p>
+
+<p> Enter PHP-Mesh.</p>
+
+<h2>Ease of Installation</h2>
+
+<p> PHP-Mesh requires <em>no modification to pages which are to be meshed</em>, though at the present
+    time, the only pages which can be handled this way are .php or plain .html files.</p>
+
+<p> Installation requires copying the contents of the package to some location on your server,
+    and then editing two files in the root of your web documents directory.  Then you need to write
+    a 'decorator' (terminology borrowed from SiteMesh), which is effectively a stylesheet but
+    a lot less complicated than XSLT.</p>
+
+<p> Some knowledge of PHP is required to write your own decorator, although the sample provided
+    should provide even beginners with a jump start to writing their own.  There is also a start to
+    documenting the main Page class.</p>
+
+<h2>Support</h2>
+
+<p> I appreciate feedback.  For bug reports, feature requests and all other comments,
+    see the menu for my contact details.</p>
+
+            
+          </div>
+        </div>
+        <div class="sidebar">
+          
+
+<h2>Software</h2>
+
+<ul>
+<li><a href="/software/actionmessenger/">ActionMessenger</a></li>
+<li><a href="/software/commandbot/">CommandBot</a></li>
+<li><a href="/software/php-mesh/">PHP-Mesh</a></li>
+</ul>
+
+<h2>Sections</h2>
+
+<ul>
+<li><a href="/software/">Software</a></li>
+<li><a href="/visual-novels/">Visual Novels</a></li>
+<li><a href="/toys/">Toys</a></li>
+<li><a href="/trips/">Trips</a></li>
+<li><a href="/misc/">Miscellaneous</a></li>
+</ul>
+
+<h2>Meta</h2>
+
+<ul>
+<li><a href="/about/">About me</a></li>
+</ul>
+
+<h2>Parallel</h2>
+
+<ul>
+<li><a href="http://imas2.wota.info/">THE iDOLM@STER 2 Strategy Site</a></li>
+</ul>
+
+<h2>Links out</h2>
+
+<ul>
+<li><a href="http://ruby-lang.org">Ruby Programming Language</a></li>
+<li><a href="http://xmpp.org/">XMPP Standards Foundation</a></li>
+<li><a href="http://psi-im.org/">Psi Instant Messenger</a></li>
+</ul>
+        </div>
+      </div>
+      <hr/>
+<div class="footer">
+  <span class="footer-clause">Copyright &copy; 2008 Trejkaz, Trypticon. All rights reserved.</span>
+  <span class="footer-clause">Built using <a href="http://nanoc.stoneship.org/">Nanoc3</a> and held together by duct tape.</span>
+</div>
+
+
+    </div>
+  </body>
+</html>
+
+

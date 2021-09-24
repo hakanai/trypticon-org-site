@@ -1,0 +1,193 @@
+html, body, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  width: 100%;
+  background-image: url('header-tile.jpg');
+  background-color: #001000;
+  min-width: 600px;
+
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+th, td {
+  text-align: left;
+  padding-right: 0.75em;
+}
+
+div.breadcrumbs {
+  font-size: smaller;
+}
+
+div.breadcrumbs span.crumb:before {
+  content: '\BB';
+  padding: 0.25em;
+}
+
+tr.vn-want {
+  background-color: rgb(255,200,200);
+}
+tr.vn-acquired {
+  background-color: rgb(255,255,200);
+}
+tr.vn-playing {
+  background-color: rgb(200,255,200);
+}
+tr.vn-completed {
+  /* background-color: white; */
+}
+
+hr {
+  display: none;
+}
+
+:link, :visited {
+  text-decoration:none;
+}
+:link {
+  color: #981A21 /* #1E981A */;
+}
+:visited {
+  color: #6A1217 /* #156A12 */;
+}
+
+:link:hover, :visited:hover {
+  color: white;
+  background: #981A21 /* #1E981A */;
+}
+
+.sidebar :link {
+  color: #A0FFA0;
+}
+.sidebar :visited {
+  color: #FFFFA0;
+}
+
+
+abbr, span.annotated {
+  border-bottom: 1px dotted black;
+}
+
+div.image {
+  display: inline-block; /* Who cares about IE?  This degrades by simply not shrinking the div. */
+  margin: 0.5em 0;
+  border: 1px solid rgb(80,80,80);
+  color: rgb(80,80,80);
+  padding: 0.5em;
+  text-align: center;
+}
+div.image > p {
+  margin: 0;
+  padding: 0.5em;
+  font-style: italic;
+  font-size: 80%;
+}
+
+
+.wrapper {
+  position: relative;
+  clear: both;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+
+.colleft {
+  float: left;
+  width: 200%;
+  margin-left: -12em;
+  position: relative;
+  right: 100%;
+}
+
+.col1wrap { /* hack */
+  float: left;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  padding-bottom: 1em;
+}
+
+.content {
+  padding: 1.5em;
+  margin: 0 1em 0 13em;
+  overflow: hidden;
+  background: white;
+}
+
+.sidebar {
+  padding: 0.5em;
+  float: right;
+  width: 10em;
+  position: relative;
+  left: 11em;
+
+  font-size: 90%;
+
+  color: white;
+  background: inherit;
+}
+
+.sidebar ul, .sidebar ol {
+  padding-left: 1.5em;
+}
+
+
+
+
+.header {
+  clear: both;
+  float: left;
+  /*border-bottom: 1px solid black;*/
+  padding: 0.5em 1em;
+  width: 100%;
+
+  color: white;
+  background: inherit;
+}
+
+.header .site-title, .header .site-subtitle {
+  padding: 0;
+  margin: 0;
+}
+
+.header .site-title {
+  padding-top: 0;
+  font-size: 250%;
+}
+.header .site-subtitle {
+  font-size: 90%;
+  padding-left: 1.5em;
+}
+
+.header :link, .header :visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+.footer {
+  clear: both;
+  padding: 0.5em 1em;
+  font-size: 90%;
+
+  color: white;
+  background: inherit;
+}
+
+.footer-clause {
+  white-space: pre;
+}
+
+.footer :link, .footer :visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+

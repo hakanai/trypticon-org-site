@@ -1,0 +1,167 @@
+
+*You can check out the list of ending under help -> about this software -> Ending list
+
+
+[Common]
+Bad end 2/14: Don't be nice to anyone
+
+
+
+[Minori]
+To enter Minori route:
+2/6:  "Go to the club" -> "........."
+2/7:  "Accept Minori's goodwill"
+2/10: "Follow her" -> "I know"
+2/12: "Weather is good, so OK"
+2/13: "You're right" -> "Don't inquire"
+2/21: "Yes, please" -> "I just want it"
+
+Bad end:
+2/26: ask 2 people who are not Tsubomi-chan.
+
+Normal end:
+2/26: "No one"
+
+Good end:
+2/26: "Tsubomi-chan" -> "Turn down her offer"
+2/27: "No" -> "House mouse" -> "Don't ask me such a thing..."
+
+
+
+[Yoshine]
+To enter Yoshine route:
+2/6:  "Go to the club"
+2/7:  "Sleep through lunch"
+2/8:  "Keep my promise with Senpai"
+2/10: "Wait for Senpai"
+2/11: "Restrain myself" -> "Senpai"
+2/12: "Kashiba-Senpai"
+
+Bad end 2/14:
+"I can't accept either"
+
+Bad end 3/26:
+2/14: "Accept Senpai"
+3/26: "Don't go to school"
+
+Bad end 4/6:
+2/14: "Accept Senpai"
+3/18: "I have to practice after treating these wounds"
+3/20: "That's Senpai" -> "I don't deserve Senpai's kindness" -> "I'm not sure, but I think I like her"
+3/21: "Put it in my desk drawer"
+3/26: "Go to school for a bit"
+3/28: "Go pick up Senpai"
+4/6: "I want to leave her alone for now" -> "I'm not the person you think I am......"
+
+Minori normal end:
+2/14: "Accept Minori"
+
+Yoshine normal end:
+2/14: "Accept Senpai"
+3/18: "I have to practice after treating these wounds"
+3/20: "That's Senpai" -> "I don't deserve Senpai's kindness" -> "I'm not sure, but I think I like her"
+3/21: "Put it in my desk drawer"
+3/26: "Go to school for a bit"
+3/28: "Go pick up Senpai"
+4/6: "I want to leave her alone for now" -> "I couldn't even save myself...... But now......!" -> "Kiss Senpai"
+
+Yoshine good end:
+2/14: "Accept Senpai"
+3/18: "I have to practice after treating these wounds"
+3/20: "That's Senpai" -> "I don't deserve Senpai's kindness" -> "I'm not sure, but I think I like her"
+3/21: "Put it in my desk drawer"
+3/26: "Go to school for a bit"
+3/28: "Go pick up Senpai"
+4/6: "I want to leave her alone for now" -> "I couldn't even save myself...... But now......!" -> "......I need time to think about it......"
+
+
+
+[Kouri]
+To enter Kouri route:
+2/6:  "Go to the club" -> "......Sigh"
+2/7:  "Activate auto guard" -> "Look for a way with my multi-eyes"
+2/9:  "I don't think I care"
+2/10: "No, she'll come"
+2/12: "Ryo-tan does not lie"
+2/14: "Let's go"
+2/15: (not neccesary, but to get a CG) "This is a lesson"
+
+World of rain:
+2/20: "Bye"
+2/21: "Don't mind me anymore"
+
+Walking with the two of us:
+2/20: "........."
+
+The girl in memory:
+2/20: "Bye"
+2/21: "............"
+2/25: "Go to the shopping district"
+
+A new life:
+2/20: "Bye"
+2/21: "............"
+2/25: "Go to the station" -> "...I see"
+
+The person I like:
+2/20: "Bye"
+2/21: "............"
+2/25: "Go to the station" -> "...Are you stupid?"
+
+
+
+[Yui]
+To enter Yui route:
+2/6:  Go to Karaoke
+2/7:  "YAJI is waiting for me" -> "Support the minority"/"I will become a hero"
+2/8:  "Let's go help her, Koutarou"
+2/9:  "I want to hear Yui sing"
+2/12: "That's weird"
+
+Bad end 2/26:
+2/17: "Yui made it, so accept her goodwill"
+2/18: "Go with Yui"
+2/21: "I guess I can try"
+2/22: "Leave her alone"
+2/25: "Do not look into people's past"
+
+Bad end 3/1:
+2/17: "Yui made it, so accept her goodwill"
+2/18: "Go with Yui"
+2/21: "I guess I can try"
+2/22: "Leave her alone"
+2/25: "Go ask Sensei about Yui" -> "I can do it for Yui"
+2/26: "Encourage her one more time"
+2/28: "Go to Yui's classroom right now"
+
+Bad end 3/5:
+2/17: "Yui made it, so accept her goodwill"
+2/18: "Go with Yui"
+2/21: "I guess I can try"
+2/22: "Leave her alone"
+2/25: "Go ask Sensei about Yui" -> "I can do it for Yui"
+2/26: "Break up with Yui"
+
+Normal end 2/21:
+2/21: "No thanks"
+
+Normal end 3/3:
+2/17: "Yui made it, so accept her goodwill"
+2/18: "Go with Yui"
+2/21: "I guess I can try"
+2/22: "Leave her alone"
+2/25: "Go ask Sensei about Yui" -> "I can do it for Yui"
+2/26: "Encourage her one more time"
+2/28: "Think for a bit"
+3/1:  "Yeah, we're best friends"
+
+Good end:
+2/17: "Yui made it, so accept her goodwill"
+2/18: "Go with Yui"
+2/21: "I guess I can try"
+2/22: "Leave her alone"
+2/25: "Go ask Sensei about Yui" -> "I can do it for Yui"
+2/26: "Encourage her one more time"
+2/28: "Think for a bit"
+3/1:  "No, that's wrong"
+

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"/>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+  <head>
+    <title>Zing :: Trypticon</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <script type="text/javascript" src="/javascripts/prototype.js"></script>
+    <script type="text/javascript" src="/javascripts/rotation.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/trypticon-2008-2.css" />
+    
+    
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-97875-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+  <span class="site-title">
+    
+      <a href="/">Trypticon</a>
+    
+  </span>
+  <span id="site-subtitle" class="site-subtitle">Strudel.</span>
+</div>
+<hr/>
+
+
+      <div class="colleft">
+        <div class="col1wrap">
+          <div class="content">
+            
+              
+                <div class="breadcrumbs">
+                  
+                    <span class="crumb"><a href="/software/">Software</a></span>
+                  
+                    <span class="crumb"><a href="/software/past-projects/">Past Projects</a></span>
+                  
+                </div>
+              
+
+              <h1>Zing</h1>
+            
+
+            <p>Zing is an idea which came out of my frustration with different bots out there.</p>
+
+<p><strong>Note: Zing is retired</strong> as the <a href="http://www.imtower.net/chatterbot/doku.php">ChatterBot</a> project appears to be doing it better.</p>
+
+<p>On the IRC side, PircBot gives us a reasonable IRC client library, and PPF gives us a lot of plugins for that library.  But what if you want to use XMPP instead?  Should we be forced to write the same plugins over and over just because we want to use them on a different chat system?  Of course not!</p>
+
+<p>I have written IRC bots in the past.  I have written XMPP bots in the past.  So this project plans to bring it together into a common framework on top of which bot plugins can be written for use with multiple chat services.</p>
+
+<p>So I started with abstracting away the chat service, and got the basics working.  But what about the plugin framework?  After looking at three different options (NetBeans Platform, JPF and OSGi) I ended up settling with OSGi.</p>
+
+<h2>OSGi</h2>
+
+<p><span class="annotated" title="Right now it's New Year's Eve, 31 December 2008">Two weeks ago</span>, OSGi was just a bunch of letters to me, but I've been learning a lot in the past week.  Basically it's a system whereby special metadata in jar files (which makes them "bundles") tells the container what depends on what, and allows the container to be strict about what classes each jar file loads.</p>
+
+<p>A good example is, if you define the service interface in a package, and then define your implementation in a different package, you can export <em>only</em> the package containing the interface, thus <em>forcing</em> the caller to go through the container to get a reference.  The container holds all sorts of magic which loads the real implementation but forces all access through a proxy.  So you can't even cast to the implementation -- you can't even load that class.</p>
+
+<p>What this ends up meaning is that (a) you are practically forced to use interfaces, and properly split your components between interface and implementation, and (b) you know exactly which bundles depend on which other bundles, and when you are forced to make conscious decisions to add dependencies, things magically keep themselves under control.  It's something I have been using IDE modules to do for ages, but in this case it's enforced by the container.</p>
+
+<p>OSGi also gives you a lot of stuff for free.  Things we get for free which are useful for a bot framework:</p>
+
+<ul>
+<li>APIs for preference storage</li>
+<li>APIs for user administration</li>
+<li>APIs for persistent services</li>
+<li>Ability to add bundle repositories</li>
+<li>Automatic update of bundles</li>
+</ul>
+
+<p>The last two are what I really like.  Imagine having a command where you can search for new plugins for your bot, and it goes out to the web to find one, installs it and starts the plugin.  And all this without restarting the bot?  Awesome.  Plugin gets updated?  Just tell the container to update its bundle, and it stops and starts it for you.</p>
+
+            
+          </div>
+        </div>
+        <div class="sidebar">
+          
+
+
+
+<h2>Software</h2>
+
+<ul>
+<li><a href="/software/actionmessenger/">ActionMessenger</a></li>
+<li><a href="/software/commandbot/">CommandBot</a></li>
+<li><a href="/software/php-mesh/">PHP-Mesh</a></li>
+</ul>
+
+<h2>Sections</h2>
+
+<ul>
+<li><a href="/software/">Software</a></li>
+<li><a href="/visual-novels/">Visual Novels</a></li>
+<li><a href="/toys/">Toys</a></li>
+<li><a href="/trips/">Trips</a></li>
+<li><a href="/misc/">Miscellaneous</a></li>
+</ul>
+
+<h2>Meta</h2>
+
+<ul>
+<li><a href="/about/">About me</a></li>
+</ul>
+
+<h2>Parallel</h2>
+
+<ul>
+<li><a href="http://imas2.wota.info/">THE iDOLM@STER 2 Strategy Site</a></li>
+</ul>
+
+<h2>Links out</h2>
+
+<ul>
+<li><a href="http://ruby-lang.org">Ruby Programming Language</a></li>
+<li><a href="http://xmpp.org/">XMPP Standards Foundation</a></li>
+<li><a href="http://psi-im.org/">Psi Instant Messenger</a></li>
+</ul>
+        </div>
+      </div>
+      <hr/>
+<div class="footer">
+  <span class="footer-clause">Copyright &copy; 2008 Trejkaz, Trypticon. All rights reserved.</span>
+  <span class="footer-clause">Built using <a href="http://nanoc.stoneship.org/">Nanoc3</a> and held together by duct tape.</span>
+</div>
+
+
+    </div>
+  </body>
+</html>
+
+

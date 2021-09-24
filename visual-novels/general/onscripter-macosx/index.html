@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"/>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+  <head>
+    <title>Setting up ONScripter properly on Mac OS X :: Trypticon</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <script type="text/javascript" src="/javascripts/prototype.js"></script>
+    <script type="text/javascript" src="/javascripts/rotation.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/trypticon-2008-2.css" />
+    
+    
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-97875-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+  <span class="site-title">
+    
+      <a href="/">Trypticon</a>
+    
+  </span>
+  <span id="site-subtitle" class="site-subtitle">Strudel.</span>
+</div>
+<hr/>
+
+
+      <div class="colleft">
+        <div class="col1wrap">
+          <div class="content">
+            
+              
+                <div class="breadcrumbs">
+                  
+                    <span class="crumb"><a href="/visual-novels/">Visual Novels</a></span>
+                  
+                    <span class="crumb"><a href="/visual-novels/general/">General</a></span>
+                  
+                </div>
+              
+
+              <h1>Setting up ONScripter properly on Mac OS X</h1>
+            
+
+            <p>This page covers setting up ONScripter properly, which is to say, in a fashion consistent with how Mac OS X usually works.  Sure, you can drop the onscripter-en application into the same directory and the resources and that will work.  But it doesn't give you that fuzzy feeling that you are using a Mac application, as Mac applications are a single item in Finder.</p>
+
+<p>The procedure will assume you are copying from a Windows ONScripter installation.  If you are copying from a proper NScripter installation then things may change a little, but most of the procedure should still apply.  If you are copying directly off a game disk then things will vary a little.</p>
+
+<p>Procedure.</p>
+
+<ol>
+<li><p>Mount the <code>.dmg</code> for ONScripter and take a copy of the executable, putting it somewhere easily accessible.  I would recommend taking a second copy just so that if you mess up, you can start from the beginning without having to mount the disk image again.</p></li>
+<li><p>On the ONScripter-EN application, right-click (Ctrl-click) and choose Show Package Contents.</p>
+
+<div class="image"><img src="/visual-novels/general/onscripter-macosx/package_contents_at_start.png" height="" width="""/><p>Figure 1. Package contents at start</p></div></li>
+<li><p>Open <code>Contents/Info.plist</code> and change the following values:</p>
+
+<ul>
+<li>Bundle identifier: this can be anything which is unique, but I tend to append some variant of the game name onto the end of the string which is already there.  It's important that it isn't the same as any other game, and it's important if you are updating a copy of the same game, that the string doesn't change, as this affects where your savegames end up.</li>
+<li>Bundle name: set this to the name of the game.</li>
+</ul>
+
+<div class="image"><img src="/visual-novels/general/onscripter-macosx/info_plist_after_editing.png" height="" width="""/><p>Figure 2. Info plist after editing</p></div>
+
+<p>Once you're done there you can save and exit.</p></li>
+<li><p>Optionally, replace the icon.</p>
+
+<p>I like to do this, but my icon skills are awful, and for whatever reason the developers of these games seem to think that 32x32 is an adequate icon size (pro-tip: even on Windows, 256x256 has been the standard size since Vista.)  So I tend to crop something from a screenshot or title screen and scale it to work.  Unfortunately this doesn't quite give the right effect for Mac OS, where the icon should be transparent in parts, such that it "weighs" about the same as other icons in the dock, but it's better than having the default ONScripter icon.</p>
+
+<p>Once you have your icon, replace <code>Contents/Resources/ONScripter.icns</code> with your new icon.</p></li>
+<li><p>Copy require game files into <code>Resources</code>.  This is where you will be copying the resources from the game install.  Naively you can assume all files are required.  You will end up with some files you don't need:</p>
+
+<ul>
+<li>The Windows icon (<code>.ico</code>)</li>
+<li>The Windows executables (<code>.exe</code>, <code>.dll</code>)</li>
+<li>Any miscellaneous readme files - I tend to leave these in anyway.  In some cases there is licence text in these which should probably remain in place.</li>
+</ul>
+
+<p>If you are copying from a CD/DVD and don't know which files are needed, you might find a file on the disk which gives away the correct way to install the game.  For Umineko, this was <code>filelist0.txt</code> - it has a list of directories and their destination directories.</p>
+
+<div class="image"><img src="/visual-novels/general/onscripter-macosx/resources_after_copying.png" height="" width="""/><p>Figure 3. Resources after copying</p></div></li>
+<li><p>I will assume at this point that are are also planning to patch the game to English.  If you're not, you might need to get <code>default.ttf</code> and whatever else the game might complain about from some location, and copy it into <code>Resources</code> along with the other files.</p>
+
+<p>Unzip the contents of the patch somewhere.  I tend to put it into the same working directory I use for the other files.</p>
+
+<p>In Resources, rename <code>arc.nsa</code> to <code>arc1.nsa</code>.  If <code>arc1.nsa</code> already exists, rename it to <code>arc2.nsa</code>, and so on until you come to a number which doesn't exist.  Then copy in:</p>
+
+<pre><code>* `arc.nsa` - taking the place of the file you just renamed
+* `nscript.dat` - overwriting the one already in there
+* `default.ttf`
+* `GPL.txt` - better to be safe than sorry
+* `*.doc` - I don't use these and they're not required, but just in case I want to read them later.
+</code></pre>
+
+<div class="image"><img src="/visual-novels/general/onscripter-macosx/resources_after_patching.png" height="" width="""/><p>Figure 4. Resources after patching</p></div></li>
+<li><p>Finally, go back out into Finder, rename the ONScripter-EN app itself to the name of the game itself.</p>
+
+<div class="image"><img src="/visual-novels/general/onscripter-macosx/icon_after_renaming.png" height="" width="""/><p>Figure 5. Icon after renaming</p></div></li>
+</ol>
+
+<p>And now you are done!  Launching the application will now find the resources from inside the app bundle, launching the game normally.</p>
+
+<p>Now if we could just get the majority of translation groups using these instructions instead of telling people to drop the ONScripter application and patch files into the game directory...</p>
+
+            
+          </div>
+        </div>
+        <div class="sidebar">
+          
+
+
+
+
+
+<h2>Sections</h2>
+
+<ul>
+<li><a href="/software/">Software</a></li>
+<li><a href="/visual-novels/">Visual Novels</a></li>
+<li><a href="/toys/">Toys</a></li>
+<li><a href="/trips/">Trips</a></li>
+<li><a href="/misc/">Miscellaneous</a></li>
+</ul>
+
+<h2>Meta</h2>
+
+<ul>
+<li><a href="/about/">About me</a></li>
+</ul>
+
+<h2>Parallel</h2>
+
+<ul>
+<li><a href="http://imas2.wota.info/">THE iDOLM@STER 2 Strategy Site</a></li>
+</ul>
+
+<h2>Links out</h2>
+
+<ul>
+<li><a href="http://ruby-lang.org">Ruby Programming Language</a></li>
+<li><a href="http://xmpp.org/">XMPP Standards Foundation</a></li>
+<li><a href="http://psi-im.org/">Psi Instant Messenger</a></li>
+</ul>
+        </div>
+      </div>
+      <hr/>
+<div class="footer">
+  <span class="footer-clause">Copyright &copy; 2009 Trejkaz, Trypticon. All rights reserved.</span>
+  <span class="footer-clause">Built using <a href="http://nanoc.stoneship.org/">Nanoc3</a> and held together by duct tape.</span>
+</div>
+
+
+    </div>
+  </body>
+</html>
+
+

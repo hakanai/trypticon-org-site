@@ -1,0 +1,19 @@
+.footer {
+  clear: both;
+  padding: 0.5em 1em;
+  font-size: 90%;
+
+  color: white;
+  background: inherit;
+}
+
+.footer-clause {
+  white-space: pre;
+}
+
+.footer :link, .footer :visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+

@@ -1,0 +1,73 @@
+html, body, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  width: 100%;
+  background: #404040; /* matches footer */
+  min-width: 600px;
+
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+th, td {
+  text-align: left;
+  padding-right: 0.75em;
+}
+
+div.breadcrumbs {
+  font-size: smaller;
+}
+
+tr.vn-want {
+  background-color: rgb(255,200,200);
+}
+tr.vn-acquired {
+  background-color: rgb(255,255,200);
+}
+tr.vn-playing {
+  background-color: rgb(200,255,200);
+}
+tr.vn-completed {
+  /* background-color: white; */
+}
+
+hr {
+  display: none;
+}
+
+:link, :visited {
+  text-decoration:none;
+}
+:link {
+  color: #981A21 /* #1E981A */;
+}
+:visited {
+  color: #6A1217 /* #156A12 */;
+}
+
+:link:hover, :visited:hover {
+  color: white;
+  background: #981A21 /* #1E981A */;
+}
+
+abbr, span.annotated {
+  border-bottom: 1px dotted black;
+}
+
+div.image {
+  display: inline-block; /* Who cares about IE?  This degrades by simply not shrinking the div. */
+  margin: 0.5em 0;
+  border: 1px solid rgb(80,80,80);
+  color: rgb(80,80,80);
+  padding: 0.5em;
+  text-align: center;
+}
+div.image > p {
+  margin: 0;
+  padding: 0.5em;
+  font-style: italic;
+  font-size: 80%;
+}
